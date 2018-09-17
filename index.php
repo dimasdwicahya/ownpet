@@ -27,10 +27,10 @@ if($message['type']=='text'){
 	if($keyword=='/menu') {
 
 		$balas = array(
-			'replyToken' => $replyToken,                                                        
+			'replyToken' => $replyToken,
 			'messages' => array(
 				array(
-					'type' => 'text',                   
+					'type' => 'text',
 					'text' => 'Perintah :
 					/menu : menampilkan menu
 					/hitung 3+3 : kalkulator'
@@ -46,15 +46,33 @@ if($message['type']=='text'){
 		$result = $m->evaluate($msg_xpl[1]);
 
 		$balas = array(
-			'replyToken' => $replyToken,                                                        
+			'replyToken' => $replyToken,
 			'messages' => array(
 				array(
-					'type' => 'text',                   
+					'type' => 'text',
 					'text' => $result
 				)
 			)
 		);
 
 		$client->replyMessage($balas);
-	}
+	}elseif($message['type']=='text'){
+
+		$msg_xpl = explode(" ", $msg_receive);
+		$keyword = $msg_xpl[0];
+
+		if($keyword=='/about') {
+
+			$balas = array(
+				'replyToken' => $replyToken,
+				'messages' => array(
+					array(
+						'type' => 'text',
+						'text' => 'Dimas Dwi Cahya'
+					)
+				)
+			);
+
+			$client->replyMessage($balas);
+
 }
