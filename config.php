@@ -1,0 +1,5 @@
+<?php
+
+$channelAccessToken = 'aj19aWJfMHqYQzTHk8OB88aX5DQtAfPSlzaCPwE6OvY0nsTd57xbXTFBmV9ADetxeA7b467YdXFMvVYn8TYaQcbOK9H0ilB0/1y8if8LoST3BkzUAYHvMHjhRxaKANWHtyJZrDWrA1F6G3qlg4ZqbQdB04t89/1O/w1cDnyilFU=';
+
+$channelSecret = 'd4a16e3e6f130b14c4a86dd7ffb69559';
